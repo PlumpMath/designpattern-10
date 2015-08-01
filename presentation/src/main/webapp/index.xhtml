@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<meta charset="utf-8" />
+	<title>OOD Example</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:inputText id="brand" value="#{carBean.brand}" required="true"
+			requiredMessage="You need to enter a value" />
+		<h:commandButton action="#{carBean.createCar}" value="Create" />
+	</h:form>
+	<h:message for="brand" id="msg" />
+	<br />
+	<ui:repeat var="brand" value="#{carBean.brands}">
+		#{brand}
+		<br />
+	</ui:repeat>
+</h:body>
+</html>

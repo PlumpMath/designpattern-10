@@ -2,16 +2,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.test</groupId>
-	<artifactId>testingproject</artifactId>
+	<groupId>pt.uc.dei.aor.paj.ood</groupId>
+	<artifactId>ood</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<description>Object Oriented Design example project</description>
+
 	<modules>
-		<module>testear</module>
-		<module>domain</module>
-		<module>webside</module>
-		<module>service</module>
+		<module>core</module>
+		<module>persistence</module>
+		<module>presentation</module>
+		<module>deploy</module>
 	</modules>
 
 	<properties>
@@ -65,21 +67,6 @@
 						<source>${java-version}</source>
 						<target>${java-version}</target>
 						<encoding>${project.build.sourceEncoding}</encoding>
-					</configuration>
-				</plugin>
-
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-ear-plugin</artifactId>
-					<version>${ear-plugin-version}</version>
-					<configuration>
-						<generateModuleId>true</generateModuleId>
-						<archive>
-							<manifest>
-								<addClasspath>true</addClasspath>
-								<classpathPrefix>lib/</classpathPrefix>
-							</manifest>
-						</archive>
 					</configuration>
 				</plugin>
 
